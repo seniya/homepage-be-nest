@@ -12,8 +12,12 @@ export class ResponseJson {
   public data: any | any[];
   public result: ResultIf;
 
-  public success(data): ResponseJson {
-    this.data = data;
+  public success(...data_): ResponseJson {
+    // this.data = data;
+    // console.log('ResponseJson success data_ : ', data_);
+    // console.log('ResponseJson success data_.length : ', data_.length);
+    this.data = data_[0];
+
     this.result = {
       code: RESULT_SUCCESS_CODE,
       message: RESULT_SUCCESS_MESSAGE,

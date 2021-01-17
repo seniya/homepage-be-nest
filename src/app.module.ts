@@ -8,6 +8,7 @@ import { CategoriesModule } from './categories/categories.module';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { SubjectsModule } from './subjects/subjects.module';
 import { FilesModule } from './files/files.module';
+import { EmployeesModule } from './employees/employees.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { FilesModule } from './files/files.module';
     AuthenticationModule,
     SubjectsModule,
     FilesModule,
+    EmployeesModule,
   ],
   controllers: [],
   providers: [],
