@@ -6,8 +6,7 @@ import { UsersModule } from './users/users.module';
 import { PostsModule } from './posts/posts.module';
 import { CategoriesModule } from './categories/categories.module';
 import { AuthenticationModule } from './authentication/authentication.module';
-import { SubjectsModule } from './subjects/subjects.module';
-import { FilesModule } from './files/files.module';
+import { AttachmentsModule } from './attachments/attachments.module';
 import { EmployeesModule } from './employees/employees.module';
 
 @Module({
@@ -28,8 +27,7 @@ import { EmployeesModule } from './employees/employees.module';
     PostsModule,
     CategoriesModule,
     AuthenticationModule,
-    SubjectsModule,
-    FilesModule,
+    AttachmentsModule,
     EmployeesModule,
   ],
   controllers: [],

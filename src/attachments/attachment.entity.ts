@@ -10,7 +10,7 @@ import {
 import User from 'src/users/user.entity';
 
 @Entity()
-class File {
+class Attachment {
   @PrimaryGeneratedColumn()
   public id: number;
 
@@ -52,6 +52,9 @@ class File {
 
   @DeleteDateColumn()
   deletedAt: Date;
+
+  // @OneToOne(() => Post, (post: Post) => post.image)
+  // public post: Post;
 }
 
-export default File;
+export default Attachment;
