@@ -11,7 +11,7 @@ import User from 'src/users/user.entity';
 
 @Entity()
 class Attachment {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   public id: number;
 
   @Column()
@@ -31,6 +31,9 @@ class Attachment {
 
   @Column()
   public size: number;
+
+  @Column()
+  public uploadType: string;
 
   @Column()
   public cntDown: number;
