@@ -14,3 +14,5 @@ JWT_SECRET=
 JWT_EXPIRATION_TIME=600000
 
 ```
+
+## 프로젝트 root 디렉토리 'uploads' 폴더 추가

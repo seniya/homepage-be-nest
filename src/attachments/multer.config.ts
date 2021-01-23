@@ -14,7 +14,6 @@ const multerConfig = () => {
 };
 
 function destFolder() {
-  console.log('multerConfig ', multerConfig);
   return path.join(__dirname, '../../' + multerConfig().dest, moment().format('YYYY_MM'));
 }
 

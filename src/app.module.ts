@@ -7,6 +7,7 @@ import { PostsModule } from './posts/posts.module';
 import { CategoriesModule } from './categories/categories.module';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { AttachmentsModule } from './attachments/attachments.module';
+import { PagemetaModule } from './pagemeta/pagemeta.module';
 import { EmployeesModule } from './employees/employees.module';
 
 @Module({
@@ -33,6 +34,7 @@ import { EmployeesModule } from './employees/employees.module';
     CategoriesModule,
     AuthenticationModule,
     AttachmentsModule,
+    PagemetaModule,
     EmployeesModule,
   ],
   controllers: [],

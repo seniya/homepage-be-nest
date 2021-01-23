@@ -12,7 +12,7 @@ import User from 'src/users/user.entity';
 @Entity()
 class Attachment {
   @PrimaryGeneratedColumn('uuid')
-  public id: number;
+  public id: string;
 
   @Column()
   public originalname: string;
