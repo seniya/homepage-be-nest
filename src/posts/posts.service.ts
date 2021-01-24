@@ -15,11 +15,17 @@ export class PostsService {
   ) {}
 
   getAllPosts() {
-    return this.postsRepository.find({ relations: ['author'] });
+    return this.postsRepository.find({
+      relations: ['author', 'categories'],
+      order: {
+        id: 'DESC',
+      },
+    });
+    // ({ relations: ['author'], desc: 'id' });
   }
 
   async getPostById(id: number) {
-    const post = await this.postsRepository.findOne(id, { relations: ['author'] });
+    const post = await this.postsRepository.findOne(id, { relations: ['author', 'categories', 'attachment'] });
     if (post) {
       return post;
     }
@@ -37,8 +43,8 @@ export class PostsService {
   }
 
   async updatePost(id: number, post: UpdatePostDto) {
-    await this.postsRepository.update(id, post);
-    const updatedPost = await this.postsRepository.findOne(id, { relations: ['author'] });
+    await this.postsRepository.save(post);
+    const updatedPost = await this.postsRepository.findOne(id, { relations: ['author', 'categories', 'attachment'] });
     if (updatedPost) {
       return updatedPost;
     }

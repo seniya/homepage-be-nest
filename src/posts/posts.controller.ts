@@ -42,7 +42,7 @@ export class PostsController {
     }
   }
 
-  @Put(':id')
+  @Post('/update/:id')
   @UseGuards(JwtAuthGuard)
   async updatePost(@Param() { id }: FindOneParams, @Body() post: UpdatePostDto) {
     try {
